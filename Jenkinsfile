@@ -4,7 +4,7 @@ agent any
 stages {
 stage('Clone Repository') {
 steps {
-git url: 'https://github.com/sriludone/Week-2.git', branch: 'main'
+git url: 'https://github.com/khushbunnisa/week7.git', branch: 'main'
 }
 }
 
@@ -17,8 +17,7 @@ bat 'docker build -t registration:v1 .'
 stage('Run Docker Container') {
 steps {
 bat 'docker rm -f registration-container || exit 0'
-bat 'docker run -d -p 5000:5000 --name registration-container
-registration:v1'
+bat 'docker run -d -p 5000:5000 --name registration-container registration:v1'
 }
 }
 }
