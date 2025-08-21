@@ -1,0 +1,2 @@
+List of dependencies required for Flask.
+flask==2.2.5
